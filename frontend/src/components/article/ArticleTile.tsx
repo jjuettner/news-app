@@ -1,22 +1,27 @@
 import "./ArticleTile.scss";
 
-const ArticleTile = () => {
+interface ArticleTileProps {
+	id: string;
+	title: string;
+	section: string;
+	date: string;
+	thumbnail: string;
+	trailText: string;
+	url: string;
+}
+
+const ArticleTile = (props: ArticleTileProps) => {
 	return (
 		<div className="tile">
 			<div className="image">
-				<img src={undefined} alt="Image" />
+				<img src={props.thumbnail} alt="Image" />
 			</div>
 			<div className="body">
 				<div className="headline">
-					<h3>This is a cool project!</h3>
+					<h3>{props.title}</h3>
 				</div>
 				<div className="content">
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo laboriosam
-						labore aperiam animi quo, doloremque culpa corporis esse magnam iure
-						distinctio quaerat eum repudiandae, corrupti provident eos consequuntur
-						nostrum. Quibusdam!
-					</p>
+					<p>{props.trailText}</p>
 				</div>
 				<div className="actions">
 					<div>Like</div>

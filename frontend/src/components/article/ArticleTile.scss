@@ -12,8 +12,13 @@
 	flex-direction: row;
 
 	.image {
-		min-width: 30%;
-		max-width: 30%;
+		width: 40%;
+		display: flex;
+		justify-content: center;
+		padding: 7px;
+		img {
+			max-width: 230px;
+		}
 	}
 
 	.body {
@@ -27,6 +32,7 @@
 		.content {
 			font-size: small;
 			text-align: left;
+			margin-bottom: 10px;
 		}
 
 		.actions {
