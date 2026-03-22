@@ -4,7 +4,7 @@ const ArticleTile = () => {
 	return (
 		<div className="tile">
 			<div className="image">
-				<img src="" alt="Image" />
+				<img src={undefined} alt="Image" />
 			</div>
 			<div className="body">
 				<div className="headline">

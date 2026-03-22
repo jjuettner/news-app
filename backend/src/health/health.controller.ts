@@ -13,6 +13,6 @@ export class HealthController {
 
   @Get()
   findAll() {
-    return 'ok';
+    return 'feeling like a million bucks';
   }
 }
