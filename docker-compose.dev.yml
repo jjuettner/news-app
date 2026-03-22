@@ -23,6 +23,15 @@ services:
         image: node:20-alpine
         container_name: backend
         working_dir: /app
+        develop:
+            watch:
+                - action: sync
+                  path: /app
+                  target: /src
+                  ignore:
+                      - /node_modules
+                - action: rebuild
+                  path: package.json
         volumes:
             - ./backend:/app # mount local source directly
             - /app/node_modules # anonymous volume so container modules aren't overwritten by host
@@ -32,12 +41,14 @@ services:
             NODE_ENV: development
             PORT: 5000
             MONGO_URI: mongodb://${MONGO_ROOT_USER}:${MONGO_ROOT_PASSWORD}@db:27017/${MONGO_DB_NAME}?authSource=admin
+            CHOKIDAR_USEPOLLING: true
+            WATCHPACK_POLLING: true
         depends_on:
             db:
                 condition: service_healthy
         networks:
             - app-network
-        command: sh -c "npm install && npx nodemon --legacy-watch src/index.js"
+        command: sh -c "npm install && npm run start:dev"
 
     # ── Frontend (Vite dev server with HMR) ───────────────────────────────────────
     frontend:
