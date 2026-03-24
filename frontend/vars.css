@@ -1,19 +1,21 @@
 :root {
-	--accent-bg: rgba(192, 132, 252, 0.15);
-	--accent-border: rgba(192, 132, 252, 0.5);
-	--accent: #c084fc;
-	--bg-footer: linear-gradient(#131418, #332c4b);
-	--bg-grad: linear-gradient(#1e1a2b, #2e303a);
-	--bg-title: linear-gradient(#332c4b, #131418);
-	--bg: #1e1a2b;
-	--border: #2e303a;
-	--code-bg: #1f2028;
-	--color-action: #dadada;
-	--heading: system-ui, "Segoe UI", Roboto, sans-serif;
-	--mono: ui-monospace, Consolas, monospace;
-	--sans: system-ui, "Segoe UI", Roboto, sans-serif;
-	--shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-	--social-bg: rgba(47, 48, 58, 0.5);
-	--text-h: #f3f4f6;
-	--text: #9ca3af;
+  --accent-bg: rgba(192, 132, 252, 0.15);
+  --accent-border: rgba(192, 132, 252, 0.5);
+  --accent: #c084fc;
+  --bg-footer: linear-gradient(#131418, #332c4b);
+  --bg-grad: linear-gradient(#1e1a2b, #2e303a);
+  --bg-title: linear-gradient(#332c4b, #131418);
+  --bg: #1e1a2b;
+  --border: #2e303a;
+  --code-bg: #1f2028;
+  --color-action: #dadada;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --shadow:
+    rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  --social-bg: rgba(47, 48, 58, 0.5);
+  --text-h: #f3f4f6;
+  --text: #9ca3af;
+  --max-width: 1124px;
 }

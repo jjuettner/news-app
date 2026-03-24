@@ -1,42 +1,50 @@
 @import "./vars.css";
 
 #root {
-	.header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0 20px;
-		background: var(--bg-title);
-		color: #fff;
-		height: 50px;
-		padding-bottom: 15px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: var(--bg-title);
+    color: #fff;
+    height: 50px;
+    padding-bottom: 15px;
 
-		.svg {
-			filter: invert(1);
-		}
+    position: sticky;
+    top: 0;
 
-		.menu-icon {
-			padding: 5px;
-			:hover {
-				background-color: var(--accent-bg);
-			}
-		}
-	}
+    .svg {
+      filter: invert(1);
+    }
 
-	.content {
-		flex: 1;
-	}
+    .menu-icon {
+      padding: 5px;
+      :hover {
+        background-color: var(--accent-bg);
+      }
+    }
+  }
 
-	.footer {
-		text-align: right;
-		background: var(--bg-title);
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		color: var(--text);
-		font-size: small;
-		div {
-			padding: 10px;
-		}
-	}
+  .content {
+    flex: 1;
+  }
+
+  .footer {
+    text-align: right;
+    background: var(--bg-title);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--text);
+    font-size: small;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: var(--max-width);
+
+    div {
+      padding: 10px;
+    }
+  }
 }

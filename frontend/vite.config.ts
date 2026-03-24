@@ -3,14 +3,14 @@ import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
 export default defineConfig({
-	plugins: [react()],
-	base: "/news-app/",
-	server: {
-		open: true,
-		port: 3001,
-		watch: {
-			usePolling: true,
-			interval: 100,
-		},
-	},
+  plugins: [react()],
+  base: "/news-app/",
+  server: {
+    open: true,
+    port: (process.env.PORT_FRONTEND as unknown as number) ?? 3001,
+    watch: {
+      usePolling: true,
+      interval: 100,
+    },
+  },
 });
